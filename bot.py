@@ -53,11 +53,11 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content == 'pep':
+    if message.content == '!pep':
         response = random.choice(pep20)
         await message.channel.send(response)
 
-    if message.content == 'pep20':
+    if message.content == '!pep20':
         response = full_pep20
         await message.channel.send(response)
         # await member.create_dm
