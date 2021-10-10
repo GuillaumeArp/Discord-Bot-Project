@@ -20,6 +20,18 @@ async def on_ready():
           f'{guild.name}(id: {guild.id})'
           )
 
+emoji_python = "<:python:896781436948975646>"
+emoji_sql = "<:sql:896781407052001320>"
+emoji_tableau = "<:tableau:896780976745775104>"
+emoji_powerbi = "<:powerbi:896781226185195620>"
+emoji_windows = "<:windows:896781323312693369>"
+emoji_linux = "<:linux:896781371744338041>"
+emoji_macos = "<:macos:896782073770147840>"
+emoji_jetbrains = "<:jetbrains:896782108486434877>"
+emoji_vscode = "<:vscode:896782141386526741>"
+emoji_knime = "<:knime:896780876770340914>"
+emoji_dataiku = "<:dataiku:896780823829811270>"
+emoji_git = "<:git:896786303683801098>"
 
 pep20 = [
     'Beautiful is better than ugly. (PEP 20 -- The Zen of Python)',
@@ -43,7 +55,8 @@ pep20 = [
     "Namespaces are one honking great idea -- let's do more of those! (PEP 20 -- The Zen of Python)"
 ]
 
-full_pep20 = "https://www.python.org/dev/peps/pep-0020/"
+full_pep20 = f"https://www.python.org/dev/peps/pep-0020/ {emoji_python}"
+
 
 @bot.command(name='pep', help='Responds with one random Zen of Python statement')
 async def pep_python(ctx):
