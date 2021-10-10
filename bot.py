@@ -3,26 +3,23 @@ import random
 
 import discord
 from dotenv import load_dotenv
+from discord.ext import commands
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
-client = discord.Client()
+bot = commands.Bot(command_prefix='!')
 
-@client.event
+@bot.event
 async def on_ready():
-    guild = discord.utils.get(client.guilds, name=GUILD)
+    guild = discord.utils.get(bot.guilds, name=GUILD)
 
 
-    print(f'{client.user} is connected to the following guild:\n'
+    print(f'{bot.user.name} is connected to the following guild:\n'
           f'{guild.name}(id: {guild.id})'
           )
 
-@client.event
-async def on_member_join(member):
-    await member.create_dm
-    await member.dm_channel.send(f'Hey {member.name}, bienvenue dans la promo Wild Data Green !')
 
 pep20 = [
     'Beautiful is better than ugly. (PEP 20 -- The Zen of Python)',
@@ -48,28 +45,23 @@ pep20 = [
 
 full_pep20 = "https://www.python.org/dev/peps/pep-0020/"
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+@bot.command(name='pep', help='Responds with one random Zen of Python statement')
+async def pep_python(ctx):
+    response = random.choice(pep20)
+    await ctx.send(response)
 
-    if message.content == '!pep':
-        response = random.choice(pep20)
-        await message.channel.send(response)
+@bot.command(name='pep20', help='Sends the link for the PEP20 page on python.org')
+async def pep_python(ctx):
+    response = full_pep20
+    await ctx.send(response)
 
-    if message.content == '!pep20':
-        response = full_pep20
-        await message.channel.send(response)
-        # await member.create_dm
-        # await member.dm_channel.send(
-        #     f"Content de voir que tu veux connaître le Zen de Python {member.name} !"
-        # )
-        # await member.dm_channel.send(
-        #     "Lance la commande `import this` dans une cellule de notebook ou une console Python ^^"
-        # )
+@bot.command(name='sign', help='Reminds everyone to sign the attendance popup in Odyssey')
+async def pep_python(ctx):
+    response = '@everyone Émargement disponible !'
+    await ctx.send(response)
 
 
-client.run(TOKEN)
+bot.run(TOKEN)
 
 
 
