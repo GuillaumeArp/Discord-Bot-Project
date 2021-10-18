@@ -99,8 +99,10 @@ async def numpy(ctx):
 async def pandas(ctx):
     response = "https://drive.google.com/file/d/1-9yVz9DAc5VcxTkQga7FgAkQhijFl6xB/view?usp=sharing"
     response_2 = "https://drive.google.com/file/d/1-6krx82wcV6VbqFz8JmRDxPp0mfByoGN/view?usp=sharing"
+    response_3 = "https://drive.google.com/file/d/12ItEPc-KZkdFdxa5faAB6vCxN2_PV-W5/view?usp=sharing"
     await ctx.send(response)
     await ctx.send(response_2)
+    await ctx.send(response_3)
 
 @bot.command(name='importing', help='Sends the cheat sheet regarding importing data in Python')
 async def importing(ctx):
