@@ -170,6 +170,15 @@ async def sql(ctx):
     response = "https://drive.google.com/file/d/12B_qS1VnqMwWvZE2Ig5_gzOzKWdhq9ay/view?usp=sharing"
     await ctx.send(response)
 
+@bot.command(name='dataviz', help='Sends the Dataviz cheat sheets')
+async def pandas(ctx):
+    response = "https://drive.google.com/file/d/12gC5Qtm5VQ1c7h5sDcdf0XyFkVfTzFSc/view?usp=sharing"
+    response_2 = "https://drive.google.com/file/d/12djPU89DoQdfLL408TuL5doge_p28psK/view?usp=sharing"
+    response_3 = "https://drive.google.com/file/d/12V6NZ6fNFsR_cKoEBnAfzomtS17-a1Nr/view?usp=sharing"
+    await ctx.send(response)
+    await ctx.send(response_2)
+    await ctx.send(response_3)
+
 bot.run(TOKEN)
 
 
