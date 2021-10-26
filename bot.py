@@ -114,10 +114,12 @@ async def jupyter(ctx):
     response = "https://drive.google.com/file/d/1-WClDt40g0URb_oQGPMvYoL4BNvZmlPS/view?usp=sharing"
     await ctx.send(response)
 
-@bot.command(name='matplotlib', help='Sends the Matplotlib cheat sheet')
+@bot.command(name='matplotlib', help='Sends the Matplotlib cheat sheets')
 async def matplotlib(ctx):
     response = "https://drive.google.com/file/d/1-NHhWnRP9ArqhW7UvzsawICv-8_uv1KM/view?usp=sharing"
+    response_2 = "https://drive.google.com/file/d/18hyobuft3Wxrd1qjKh2nGqFoUD48IXXq/view?usp=sharing"
     await ctx.send(response)
+    await ctx.send(response_2)
 
 @bot.command(name='seaborn', help='Sends the Seaborn cheat sheet')
 async def seaborn(ctx):
