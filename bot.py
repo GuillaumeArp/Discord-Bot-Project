@@ -85,11 +85,6 @@ async def py_basics(ctx):
     response = "https://drive.google.com/file/d/1-tror16uiEhs-OdWffP6wWo-OpcNRNGe/view?usp=sharing"
     await ctx.send(response)
 
-# @bot.command(name='pandas', help='Sends the Pandas cheat sheet')
-# async def pandas(ctx):
-#     response = "https://drive.google.com/file/d/1-9yVz9DAc5VcxTkQga7FgAkQhijFl6xB/view?usp=sharing"
-#     await ctx.send(response)
-
 @bot.command(name='numpy', help='Sends the Numpy cheat sheet')
 async def numpy(ctx):
     response = "https://drive.google.com/file/d/1-Lv2tPRtlFBYfsXlrFmuASdoW4ndaDYJ/view?usp=sharing"
@@ -134,6 +129,11 @@ async def bokeh(ctx):
 @bot.command(name='scipy', help='Sends the SciPy cheat sheet')
 async def scipy(ctx):
     response = "https://drive.google.com/file/d/1-oVJgPoXC8TyUkw0QLJ8pCU04rivnu8U/view?usp=sharing"
+    await ctx.send(response)
+
+@bot.command(name='plotly', help='Sends the Plotly cheat sheet')
+async def plotly(ctx):
+    response = "https://drive.google.com/file/d/12TnfrX4lRNquxfnCJaUAOXfvu4uNm7dS/view?usp=sharing"
     await ctx.send(response)
 
 @bot.command(name='sklearn', help='Sends the scikit-learn cheat sheet')
