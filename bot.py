@@ -136,9 +136,11 @@ async def plotly(ctx):
     response = "https://drive.google.com/file/d/12TnfrX4lRNquxfnCJaUAOXfvu4uNm7dS/view?usp=sharing"
     await ctx.send(response)
 
-@bot.command(name='sklearn', help='Sends the scikit-learn cheat sheet')
+@bot.command(name='sklearn', help='Sends the scikit-learn cheat sheets')
 async def sklearn(ctx):
     response = "https://drive.google.com/file/d/1-d-cTfrI7jHZEY105CoDJCHyEpPg1znz/view?usp=sharing"
+    response_2 = "https://drive.google.com/file/d/1fsMND0OHn4vaZIK97vsOTTZVImAiDCki/view?usp=sharing"
+    await ctx.send(response_2)
     await ctx.send(response)
 
 @bot.command(name='pyspark', help='Sends the PySpark cheat sheets')
